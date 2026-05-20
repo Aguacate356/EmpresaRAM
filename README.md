@@ -1,36 +1,32 @@
-# RAM Factory – Manager Inteligente de Producción
+# RAM Factory 
 
-Aplicación web con Flask + MySQL (XAMPP) + IA Claude (Anthropic).
+Aplicación web con Flask + MySQL (XAMPP) + grok
 
 ---
 
-## ✅ REQUISITOS PREVIOS
+##  REQUISITOS PREVIOS
 - Python 3.10+
 - XAMPP instalado y corriendo (Apache + MySQL)
 - Cuenta en console.anthropic.com para obtener tu API Key
 
 ---
 
-## 🚀 INSTALACIÓN PASO A PASO
+## INSTALACIÓN PASO A PASO
 
-### 1. Instalar Python
-Descarga desde: https://www.python.org/downloads/
-Marca la casilla ✅ "Add Python to PATH" al instalar.
-
-### 2. Instalar dependencias
+### Instalar dependencias
 Abre una terminal (CMD o PowerShell) dentro de la carpeta del proyecto:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configurar la base de datos
+### Configurar la base de datos
 1. Inicia XAMPP y activa Apache + MySQL
 2. Abre phpMyAdmin: http://localhost/phpmyadmin
 3. Crea una base de datos llamada `ram_factory`
 4. Importa el archivo `database.sql`
 
-### 4. Configurar variables de entorno
+### Configurar variables de entorno
 Edita el archivo `.env` y pon tu API Key de Anthropic:
 
 ```
@@ -44,7 +40,7 @@ Si tu MySQL tiene contraseña, también ponla:
 MYSQL_PASSWORD=tu_contraseña
 ```
 
-### 5. Ejecutar la aplicación
+### Ejecutar la aplicación
 ```bash
 python app.py
 ```
@@ -52,16 +48,17 @@ python app.py
 Abre en tu navegador: http://localhost:5000
 
 ---
+### Ejecutar el codigo para que te de las contraseñas 
+python reset_passwords.py
 
-## 👥 USUARIOS DE PRUEBA
+## USUARIOS DE PRUEBA
 | Email                    | Contraseña | Rol   |
-|--------------------------|------------|-------|
 | admin@ramfactory.com     | admin123   | Admin |
 | user@ramfactory.com      | admin123   | User  |
 
 ---
 
-## 📁 ESTRUCTURA DEL PROYECTO
+## ESTRUCTURA DEL PROYECTO
 ```
 ram_factory/
 ├── app.py              ← Punto de entrada
@@ -90,13 +87,13 @@ ram_factory/
 
 ---
 
-## 🧠 FUNCIONALIDADES
-- ✅ Login con roles (Admin / User)
-- ✅ Dashboard Admin con 4 gráficas (Chart.js)
-- ✅ Dashboard User con vista operativa
-- ✅ Control de inventario de materia prima
-- ✅ Registro de producción diaria
-- ✅ Gestión de usuarios
-- ✅ Asistente IA con Claude (Anthropic)
-- ✅ Historial de consultas IA
-- ✅ Alertas de stock bajo
+## FUNCIONALIDADES
+-  Login con roles (Admin / User)
+-  Dashboard Admin con 4 gráficas (Chart.js)
+- Dashboard User con vista operativa
+- Control de inventario de materia prima
+- Registro de producción diaria
+- Gestión de usuarios
+- Asistente IA con grok
+- Historial de consultas IA
+- Alertas de stock bajo
